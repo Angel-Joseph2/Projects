@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ── Reset & Base ────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #1a2235;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background: #141414;
+  color: #e0e0e0;
+}
+
+/* ── Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f0f4f8; }
+::-webkit-scrollbar-thumb { background: #b0c4de; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #0d6efd; }
+
+/* ── Ant Design Sidebar Menu overrides ───────────────── */
+.ant-menu-dark .ant-menu-item {
+  border-radius: 10px !important;
+  margin: 4px 10px !important;
+  width: calc(100% - 20px) !important;
+  transition: background 0.2s ease;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background: rgba(79, 195, 247, 0.18) !important;
+  color: #4fc3f7 !important;
+  border-left: 3px solid #4fc3f7 !important;
+}
+
+.ant-menu-dark .ant-menu-item:hover {
+  background: rgba(255,255,255,0.08) !important;
+}
+
+/* ── Ant Table alternating rows ──────────────────────── */
+.ant-table-tbody > tr.alt-row > td {
+  background: #f7faff;
+}
+
+body.dark-mode .ant-table-tbody > tr.alt-row > td {
+  background: #1f1f1f;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #eef4ff !important;
+  transition: background 0.2s;
+}
+
+body.dark-mode .ant-table-tbody > tr:hover > td {
+  background: #2a2a2a !important;
+}
+
+/* ── Card hover ──────────────────────────────────────── */
+.ant-card {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+/* ── Button ripple effect ────────────────────────────── */
+.ant-btn {
+  transition: all 0.2s ease;
+}
+.ant-btn:not(.ant-btn-text):not(.ant-btn-link):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13,110,253,0.25);
+}
+.ant-btn:active {
+  transform: translateY(0);
+}
+
+/* ── Input focus glow ────────────────────────────────── */
+.ant-input:focus,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+  box-shadow: 0 0 0 3px rgba(13,110,253,0.15) !important;
+  border-color: #0d6efd !important;
+}
+
+/* ── Modal header ────────────────────────────────────── */
+.ant-modal-header {
+  border-bottom: 1px solid #eef2fb;
+  padding-bottom: 14px;
+}
+
+body.dark-mode .ant-modal-header {
+  border-bottom: 1px solid #303030;
+}
+
+/* ── Statistic number pop ────────────────────────────── */
+.ant-statistic-content-value {
+  line-height: 1.1 !important;
+}
+
+/* ── Fade-in animation for pages ─────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ant-layout-content > div {
+  animation: fadeInUp 0.35s ease both;
+}
+
+/* ── Tag pill style ──────────────────────────────────── */
+.ant-tag {
+  border-radius: 20px !important;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* ── Tooltip ─────────────────────────────────────────── */
+.ant-tooltip-inner {
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* ── Responsive content padding ─────────────────────── */
+@media (max-width: 768px) {
+  .ant-layout-content {
+    margin: 12px !important;
+  }
+}
+
+/* ── Print Styles ────────────────────────────────────── */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-section, #print-section * {
+    visibility: visible;
+  }
+  #print-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white;
+  }
+  /* Hide scrollbars and reset backgrounds */
+  html, body {
+    height: auto;
+    background: white;
+  }
+}
