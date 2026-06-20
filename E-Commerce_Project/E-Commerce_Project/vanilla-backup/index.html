@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUXE — Modern Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-inner">
+      <span class="loader-logo">LUXE</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" aria-label="Back to top"><i class="fa fa-arrow-up"></i></button>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">LUXE</a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#offers">Deals</a></li>
+        <li><a href="#testimonials">About</a></li>
+        <li><a href="#newsletter">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="search-wrap">
+          <input type="text" placeholder="Search products…" class="search-input" id="search-input" />
+          <button class="search-btn" aria-label="Search"><i class="fa fa-search"></i></button>
+        </div>
+        <button class="icon-btn" id="dark-toggle" aria-label="Toggle dark mode"><i class="fa fa-moon"></i></button>
+        <button class="icon-btn cart-btn" aria-label="Cart">
+          <i class="fa fa-shopping-bag"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">New Season · 2025 Collection</p>
+      <h1 class="hero-headline">
+        Style is<br />
+        <em>what you wear</em><br />
+        when you arrive.
+      </h1>
+      <p class="hero-sub">Discover curated fashion, electronics, and lifestyle essentials — all in one place.</p>
+      <div class="hero-ctas">
+        <a href="#featured" class="btn-primary">Shop Now</a>
+        <a href="#categories" class="btn-ghost">Browse Categories</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">50K+</span><span class="stat-label">Products</span></div>
+        <div class="stat"><span class="stat-num">4.9★</span><span class="stat-label">Rating</span></div>
+        <div class="stat"><span class="stat-num">Free</span><span class="stat-label">Shipping $50+</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card card-1">
+        <div class="hero-card-img" style="background: linear-gradient(135deg,#e8c5a0,#d4956a);">
+          <i class="fa fa-tshirt hero-card-icon"></i>
+        </div>
+        <div class="hero-card-info"><span>Silk Blazer</span><strong>$189</strong></div>
+      </div>
+      <div class="hero-card card-2">
+        <div class="hero-card-img" style="background: linear-gradient(135deg,#a8c5da,#6a9bb0);">
+          <i class="fa fa-headphones hero-card-icon"></i>
+        </div>
+        <div class="hero-card-info"><span>Wireless Pro</span><strong>$249</strong></div>
+      </div>
+      <div class="hero-card card-3">
+        <div class="hero-card-img" style="background: linear-gradient(135deg,#c5d4a8,#8fa86a);">
+          <i class="fa fa-couch hero-card-icon"></i>
+        </div>
+        <div class="hero-card-info"><span>Nordic Chair</span><strong>$399</strong></div>
+      </div>
+      <div class="hero-badge"><span>UP TO</span><strong>40%</strong><span>OFF</span></div>
+    </div>
+  </section>
+
+  <!-- ========== MARQUEE STRIP ========== -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Free Shipping on Orders $50+</span>
+      <span class="dot">·</span>
+      <span>New Arrivals Every Week</span>
+      <span class="dot">·</span>
+      <span>30-Day Returns</span>
+      <span class="dot">·</span>
+      <span>Secure Checkout</span>
+      <span class="dot">·</span>
+      <span>Free Shipping on Orders $50+</span>
+      <span class="dot">·</span>
+      <span>New Arrivals Every Week</span>
+      <span class="dot">·</span>
+      <span>30-Day Returns</span>
+      <span class="dot">·</span>
+      <span>Secure Checkout</span>
+      <span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- ========== CATEGORIES ========== -->
+  <section id="categories" class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Explore</p>
+        <h2 class="section-title">Shop by Category</h2>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card" data-aos>
+          <div class="cat-img" style="background:linear-gradient(135deg,#667eea,#764ba2);">
+            <i class="fa fa-laptop"></i>
+          </div>
+          <h3>Electronics</h3>
+          <p>240+ items</p>
+        </div>
+        <div class="category-card" data-aos>
+          <div class="cat-img" style="background:linear-gradient(135deg,#f093fb,#f5576c);">
+            <i class="fa fa-tshirt"></i>
+          </div>
+          <h3>Fashion</h3>
+          <p>1,800+ items</p>
+        </div>
+        <div class="category-card" data-aos>
+          <div class="cat-img" style="background:linear-gradient(135deg,#4facfe,#00f2fe);">
+            <i class="fa fa-blender"></i>
+          </div>
+          <h3>Home & Kitchen</h3>
+          <p>950+ items</p>
+        </div>
+        <div class="category-card" data-aos>
+          <div class="cat-img" style="background:linear-gradient(135deg,#f6d365,#fda085);">
+            <i class="fa fa-spa"></i>
+          </div>
+          <h3>Beauty</h3>
+          <p>620+ items</p>
+        </div>
+        <div class="category-card" data-aos>
+          <div class="cat-img" style="background:linear-gradient(135deg,#96fbc4,#f9f586);">
+            <i class="fa fa-dumbbell"></i>
+          </div>
+          <h3>Sports</h3>
+          <p>430+ items</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED PRODUCTS ========== -->
+  <section id="featured" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Handpicked</p>
+        <h2 class="section-title">Featured Products</h2>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="electronics">Electronics</button>
+          <button class="filter-tab" data-filter="fashion">Fashion</button>
+          <button class="filter-tab" data-filter="home">Home</button>
+        </div>
+      </div>
+      <div class="products-grid" id="products-grid">
+
+        <div class="product-card" data-category="electronics">
+          <div class="product-img" style="background:linear-gradient(135deg,#232526,#414345);">
+            <i class="fa fa-headphones"></i>
+            <div class="product-actions">
+              <button class="prod-action" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+              <button class="prod-action" aria-label="Quick view" data-desc="Immersive sound with 30-hour battery life and adaptive noise cancellation."><i class="fa fa-eye"></i></button>
+            </div>
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Electronics</p>
+            <h4 class="product-name">Noise-Cancelling Headphones</h4>
+            <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><span>(128)</span></div>
+            <div class="product-footer">
+              <span class="product-price">$249</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="fashion">
+          <div class="product-img" style="background:linear-gradient(135deg,#b79891,#94716b);">
+            <i class="fa fa-tshirt"></i>
+            <div class="product-actions">
+              <button class="prod-action" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+              <button class="prod-action" aria-label="Quick view" data-desc="Luxuriously soft, sustainably sourced. Built for layering through every season."><i class="fa fa-eye"></i></button>
+            </div>
+            <span class="product-badge sale-badge">−20%</span>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Fashion</p>
+            <h4 class="product-name">Merino Wool Coat</h4>
+            <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><span>(87)</span></div>
+            <div class="product-footer">
+              <span class="product-price">$345 <del>$430</del></span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="home">
+          <div class="product-img" style="background:linear-gradient(135deg,#d4d4aa,#9a9a6a);">
+            <i class="fa fa-couch"></i>
+            <div class="product-actions">
+              <button class="prod-action" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+              <button class="prod-action" aria-label="Quick view" data-desc="Minimalist form meets maximum comfort. Solid oak frame with premium linen upholstery."><i class="fa fa-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Home</p>
+            <h4 class="product-name">Japandi Lounge Chair</h4>
+            <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><span>(54)</span></div>
+            <div class="product-footer">
+              <span class="product-price">$599</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="electronics">
+          <div class="product-img" style="background:linear-gradient(135deg,#1a1a2e,#16213e);">
+            <i class="fa fa-mobile-alt"></i>
+            <div class="product-actions">
+              <button class="prod-action" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+              <button class="prod-action" aria-label="Quick view" data-desc="6.7-inch AMOLED, 200MP camera system, 5000mAh battery. Photography reimagined."><i class="fa fa-eye"></i></button>
+            </div>
+            <span class="product-badge">Hot</span>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Electronics</p>
+            <h4 class="product-name">Ultra Slim Smartphone</h4>
+            <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><span>(312)</span></div>
+            <div class="product-footer">
+              <span class="product-price">$899</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="fashion">
+          <div class="product-img" style="background:linear-gradient(135deg,#a8edea,#fed6e3);">
+            <i class="fa fa-shoe-prints"></i>
+            <div class="product-actions">
+              <button class="prod-action" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+              <button class="prod-action" aria-label="Quick view" data-desc="Ultra-light responsive foam sole with breathable mesh upper. Runs like a dream."><i class="fa fa-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Fashion</p>
+            <h4 class="product-name">Cloud Runner Sneakers</h4>
+            <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><span>(201)</span></div>
+            <div class="product-footer">
+              <span class="product-price">$145</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="home">
+          <div class="product-img" style="background:linear-gradient(135deg,#ffecd2,#fcb69f);">
+            <i class="fa fa-coffee"></i>
+            <div class="product-actions">
+              <button class="prod-action" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+              <button class="prod-action" aria-label="Quick view" data-desc="Barista-grade 15-bar pressure, built-in grinder, and milk frother. Café at home."><i class="fa fa-eye"></i></button>
+            </div>
+            <span class="product-badge sale-badge">−15%</span>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Home</p>
+            <h4 class="product-name">Precision Espresso Maker</h4>
+            <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><span>(96)</span></div>
+            <div class="product-footer">
+              <span class="product-price">$329 <del>$389</del></span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SPECIAL OFFERS ========== -->
+  <section id="offers" class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Limited Time</p>
+        <h2 class="section-title">Special Offers</h2>
+      </div>
+      <div class="offers-grid">
+        <div class="offer-card offer-flash">
+          <div class="offer-content">
+            <span class="offer-label"><i class="fa fa-bolt"></i> Flash Sale</span>
+            <h3>Electronics<br />Up to 40% Off</h3>
+            <p>Today only — ends midnight</p>
+            <a href="#featured" class="btn-primary">Shop Electronics</a>
+          </div>
+          <div class="offer-countdown" id="countdown">
+            <div class="cd-block"><span id="cd-h">00</span><small>Hours</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span id="cd-m">00</span><small>Mins</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span id="cd-s">00</span><small>Secs</small></div>
+          </div>
+        </div>
+
+        <div class="offer-card offer-seasonal">
+          <div class="offer-content">
+            <span class="offer-label">Summer Edit</span>
+            <h3>Fashion<br />New In</h3>
+            <p>200+ fresh styles added</p>
+            <a href="#categories" class="btn-ghost-light">Browse Fashion</a>
+          </div>
+        </div>
+
+        <div class="offer-card offer-bundle">
+          <div class="offer-content">
+            <span class="offer-label">Bundle Deal</span>
+            <h3>Home Starter<br />Kit — $299</h3>
+            <p>Worth $480 individually</p>
+            <a href="#featured" class="btn-ghost-light">Get Bundle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUST STRIP ========== -->
+  <div class="trust-strip">
+    <div class="container trust-grid">
+      <div class="trust-item"><i class="fa fa-shipping-fast"></i><div><strong>Free Shipping</strong><span>On orders over $50</span></div></div>
+      <div class="trust-item"><i class="fa fa-undo-alt"></i><div><strong>Easy Returns</strong><span>30-day return policy</span></div></div>
+      <div class="trust-item"><i class="fa fa-lock"></i><div><strong>Secure Payment</strong><span>256-bit SSL encryption</span></div></div>
+      <div class="trust-item"><i class="fa fa-headset"></i><div><strong>24/7 Support</strong><span>Chat, email, or phone</span></div></div>
+    </div>
+  </div>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section id="testimonials" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Happy Customers</p>
+        <h2 class="section-title">What People Are Saying</h2>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="t-avatar" style="background:linear-gradient(135deg,#667eea,#764ba2);">S</div>
+          <div class="t-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+          <p class="t-text">"The quality of the merino coat blew me away. Arrived in two days, packaging was beautiful, and it fits perfectly."</p>
+          <div class="t-name">Sophia M. <span>Fashion buyer, London</span></div>
+        </div>
+
+        <div class="testimonial-card t-featured">
+          <div class="t-avatar" style="background:linear-gradient(135deg,#f5a623,#e08a00);">A</div>
+          <div class="t-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+          <p class="t-text">"I've ordered from a dozen online stores and LUXE is the only one I come back to every time. The curation is just different — feels personal."</p>
+          <div class="t-name">Alex K. <span>Tech enthusiast, NY</span></div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="t-avatar" style="background:linear-gradient(135deg,#6b8f71,#4a6b50);">P</div>
+          <div class="t-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+          <p class="t-text">"The espresso maker is a game changer. Customer support helped me set it up over chat — incredible service."</p>
+          <div class="t-name">Priya R. <span>Coffee addict, Toronto</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEWSLETTER ========== -->
+  <section id="newsletter" class="section newsletter-section">
+    <div class="container newsletter-inner">
+      <div class="newsletter-text">
+        <p class="section-eyebrow">Stay in the Loop</p>
+        <h2>Get Early Access to<br /><em>Deals & Drops</em></h2>
+        <p class="newsletter-sub">Join 80,000+ subscribers. No spam — ever.</p>
+      </div>
+      <form class="newsletter-form">
+        <div class="newsletter-input-group">
+          <input type="email" placeholder="Enter your email address" required class="nl-input" />
+          <button type="submit" class="btn-primary">Subscribe</button>
+        </div>
+        <p class="newsletter-note">By subscribing you agree to our Privacy Policy.</p>
+        <div class="newsletter-success" id="nl-success" style="display:none;">
+          <i class="fa fa-check-circle"></i> You're in! Check your inbox.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">LUXE</a>
+        <p>Modern shopping for modern lives. Curated products, effortless delivery, genuine care.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#featured">Products</a></li>
+          <li><a href="#offers">Deals</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i class="fa fa-envelope"></i> hello@luxe.shop</li>
+          <li><i class="fa fa-phone"></i> +1 (800) 555-LUXE</li>
+          <li><i class="fa fa-map-marker-alt"></i> 42 Design St, NY</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 LUXE. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close"><i class="fa fa-times"></i></button>
+      <div class="modal-body">
+        <div class="modal-img"><i class="fa fa-box-open"></i></div>
+        <div class="modal-info">
+          <h3 id="modal-title"></h3>
+          <p class="modal-price" id="modal-price"></p>
+          <p id="modal-desc"></p>
+          <button class="btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
